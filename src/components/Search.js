@@ -25,6 +25,18 @@ const Search = () => {
     search();
   }, [term])
 
+  const renderedResults = results.map(result => {
+    return (
+      <div className="item">
+        <div className="content">
+          <div className="header">
+            {result.title}
+          </div>
+        </div>
+      </div>
+    )
+  })
+
   return (
     <div>
       <div className="ui form">
